@@ -1,25 +1,25 @@
 <template>
   <div class="columns">
-    <div class="column">
-      <img src="../assets/logo.png"/>
+    <div class="column is-center">
+      <img  class="is-center" src="../assets/logo.png"/>
     </div>
     <div class="column">
       <form @submit.prevent="login" >
         <div>
           <h4 > <b>Login</b></h4>
           <div >
-            <div >
-              <div >
-                <input required type="email" name="email" v-model="email" class="form-control" placeholder="Email">
+            <div class="field">
+              <div class="control">
+                <input required type="email" name="email" v-model="email" class="input is-primary" placeholder="Email">
               </div>
             </div>
-            <div >
-              <div >
-                <input required type="password" name="password" v-model="password" class="form-control" placeholder="Password">
+            <div class="field">
+              <div class="control">
+                <input required type="password" name="password" v-model="password" class="input is-primary" placeholder="Password">
               </div>
             </div>
-            <div>
-              <button type="submit" class="btn btn-primary" value="Login">Login</button>
+            <div class="buttons is-centered">
+              <button type="submit" class="button" value="Login">Login</button>
             </div>
           </div>
         </div>

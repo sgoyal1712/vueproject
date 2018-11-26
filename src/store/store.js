@@ -11,6 +11,7 @@ export const store = new Vuex.Store({
   },
   mutations: {
     tokenUpdate(state, data) {
+      localStorage.setItem('access_token', data);
       state.token = data;
     }
   },

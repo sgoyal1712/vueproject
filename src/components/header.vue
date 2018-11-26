@@ -4,7 +4,7 @@
       <li><router-link to="/" exact>Blog</router-link></li>
       <li><router-link to="/add" exact>Add a new blog</router-link></li>
       <li><router-link v-if="!token" to="/login" exact>Login</router-link></li>
-      <li><button v-if="token" v-on:click="logout" exact>Logout</button></li>
+      <li><button class="button is-primary is-rounded" v-if="token" v-on:click="logout" exact>Logout</button></li>
     </ul>
   </nav>
 </template>
@@ -16,14 +16,16 @@
     },
     computed: {
       token(){
+        if(this.$store.state.token == '')
+          return null;
         return this.$store.state.token
       }
     },
     methods:{
       logout(){
         console.log('here is logout');
-        this.$store.commit('tokenUpdate',null);
-        this.$router.push({ path: '/' })
+        this.$store.commit('tokenUpdate','');
+        this.$router.push({ path: '/login' })
       }
     }
 

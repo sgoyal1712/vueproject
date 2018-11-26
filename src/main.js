@@ -5,6 +5,7 @@ import App from './App.vue'
 import Routes from './routes'
 import Vuex from 'vuex'
 import {store} from './store/store'
+import '../node_modules/bulma/css/bulma.css'
 
 // Use packages
 Vue.use(VueResource);
