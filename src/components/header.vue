@@ -3,12 +3,31 @@
     <ul>
       <li><router-link to="/" exact>Blog</router-link></li>
       <li><router-link to="/add" exact>Add a new blog</router-link></li>
+      <li><router-link v-if="!token" to="/login" exact>Login</router-link></li>
+      <li><button v-if="token" v-on:click="logout" exact>Logout</button></li>
     </ul>
   </nav>
 </template>
 
 <script>
-  export default {}
+  export default {
+    data:{
+
+    },
+    computed: {
+      token(){
+        return this.$store.state.token
+      }
+    },
+    methods:{
+      logout(){
+        console.log('here is logout');
+        this.$store.commit('tokenUpdate',null);
+        this.$router.push({ path: '/' })
+      }
+    }
+
+  }
 </script>
 
 <style scoped>

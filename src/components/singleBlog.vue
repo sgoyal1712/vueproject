@@ -6,8 +6,6 @@
 </template>
 
 <script>
-  // Imports
-  import searchMixin from '../mixins/searchMixin';
 
   export default {
     data () {

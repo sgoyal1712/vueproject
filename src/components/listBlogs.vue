@@ -19,6 +19,7 @@
         search: ''
       }
     },
+    // not using axios because basURL is different, used that in login to show-case.
     created() {
       this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function(data){
         this.blogs = data.body.slice(0,10);

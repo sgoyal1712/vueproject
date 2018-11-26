@@ -3,18 +3,23 @@ import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import Routes from './routes'
+import Vuex from 'vuex'
+import {store} from './store/store'
 
 // Use packages
 Vue.use(VueResource);
 Vue.use(VueRouter);
+Vue.use(Vuex);
 
 // Register routes
 const router = new VueRouter({
   routes: Routes
+
 });
 
 new Vue({
   el: '#app',
   render: h => h(App),
-  router: router
-})
+  router: router,
+  store: store
+});
