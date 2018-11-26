@@ -8,19 +8,18 @@ import {store} from './store/store'
 import '../node_modules/bulma/css/bulma.css'
 
 // Use packages
-Vue.use(VueResource);
-Vue.use(VueRouter);
-Vue.use(Vuex);
+Vue.use(VueResource)
+Vue.use(VueRouter)
+Vue.use(Vuex)
 
 // Register routes
 const router = new VueRouter({
   routes: Routes
-
-});
+})
 
 new Vue({
   el: '#app',
   render: h => h(App),
   router: router,
   store: store
-});
+})

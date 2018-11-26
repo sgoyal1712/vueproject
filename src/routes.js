@@ -1,7 +1,7 @@
-import addBlog from './components/addBlog.vue';
-import showBlogs from './components/showBlogs.vue';
-import singleBlog from './components/singleBlog.vue';
-import login from './components/login.vue';
+import addBlog from './components/addBlog.vue'
+import showBlogs from './components/showBlogs.vue'
+import singleBlog from './components/singleBlog.vue'
+import login from './components/login.vue'
 
 
 export default [
